@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Profil Usamah</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f4f6f8;
@@ -17,7 +15,6 @@
       line-height: 1.6;
     }
 
-    /* Section 1: Menu */
     header {
       background-color: #1f2937;
       padding: 20px 40px;
@@ -38,13 +35,13 @@
       text-decoration: underline;
     }
 
-    /* Section 2: Judul & Gambar */
     .hero {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 60px 40px;
       background-color: white;
+      flex-wrap: wrap;
     }
 
     .hero .text {
@@ -69,39 +66,20 @@
       box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     }
 
-    /* Section 3: Biodata */
     .biodata {
       padding: 40px;
     }
 
-    .biodata h2 {
-      margin-bottom: 20px;
-      font-size: 1.8em;
-    }
-
-    .biodata table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 20px;
-    }
-
-    .biodata td {
+    .bio-box {
       background-color: white;
       padding: 20px;
+      margin-bottom: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      width: 33%;
-      vertical-align: top;
     }
 
-    /* Section 4: Portofolio (Gambar 2 Kolom) */
     .portfolio {
       padding: 40px;
-    }
-
-    .portfolio h2 {
-      margin-bottom: 20px;
-      font-size: 1.8em;
     }
 
     .portfolio-grid {
@@ -146,12 +124,8 @@
         text-align: center;
       }
 
-      .hero .text, .hero img {
+      .hero .text {
         max-width: 100%;
-      }
-
-      .biodata table {
-        font-size: 14px;
       }
 
       .portfolio-grid {
@@ -164,7 +138,7 @@
 
   <!-- Section 1: Menu -->
   <header>
-    <div class="logo">🧑‍💻 Profile</div>
+    <div class="logo">Profile</div>
     <nav>
       <a href="#biodata">Biodata</a>
       <a href="#portfolio">Portofolio</a>
@@ -176,54 +150,80 @@
   <section class="hero">
     <div class="text">
       <h1>Selamat datang</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum illo officiis explicabo debitis, qui impedit. Ad ea iste aut, architecto dolorum, voluptas dicta, laboriosam facere at repellat mollitia temporibus! Eos.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum illo officiis explicabo debitis, qui impedit.</p>
     </div>
-    <img src="https://via.placeholder.com/250" alt="">
+    <img src="https://imgs.search.brave.com/StlxyBoQ0njPZKEq3Y0eOAO_fMzK-NeceVXKMiXvBR8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzY2LzM5LzU0/LzM2MF9GXzE2NjM5/NTQwMl9VY2JhUzVa/NVRqMXJFYk12emhI/UjFVN0RwQ2dDV2Qz/ci5qcGc" alt="Foto Profil">
   </section>
 
-  <!-- Section 3: Biodata -->
+  <!-- Section 3: Biodata (dengan grid Bootstrap) -->
   <section class="biodata" id="biodata">
-    <h2>🧾 Biodata</h2>
-    <table>
-      <tr>
-        <td><strong>Nama:</strong><br>John Doe</td>
-        <td><strong>Tempat/Tanggal Lahir:</strong><br>Bogor, 1 Januari 2000</td>
-        <td><strong>Jenis Kelamin:</strong><br>Laki-laki</td>
-      </tr>
-      <tr>
-        <td><strong>Alamat:</strong><br>Jl. Contoh No. 123, Bogor</td>
-        <td><strong>Nomor HP:</strong><br>0812-3456-7890</td>
-        <td><strong>Email:</strong><br>example@email.com</td>
-      </tr>
-    </table>
+    <div class="container">
+      <h2 class="mb-4">🧾 Biodata</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="bio-box">
+            <strong>Nama:</strong><br>John Doe
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bio-box">
+            <strong>Tempat/Tanggal Lahir:</strong><br>Bogor, 1 Januari 2000
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bio-box">
+            <strong>Jenis Kelamin:</strong><br>Laki-laki
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bio-box">
+            <strong>Alamat:</strong><br>Jl. Contoh No. 123, Bogor
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bio-box">
+            <strong>Nomor HP:</strong><br>0812-3456-7890
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bio-box">
+            <strong>Email:</strong><br>example@email.com
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Section 4: Portofolio -->
   <section class="portfolio" id="portfolio">
-    <h2>🧰 Portofolio</h2>
-    <div class="portfolio-grid">
-      <div class="card">
-        <img src="https://via.placeholder.com/500x300?text=Project+1" alt="Project 1">
-        <h3>Proyek 1</h3>
-        <p>Deskripsi Proyek 1</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/500x300?text=Project+2" alt="Project 2">
-        <h3>Proyek 2</h3>
-        <p>Deskripsi proyek 2</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/500x300?text=Project+3" alt="Project 3">
-        <h3>Proyek 3</h3>
-        <p>Deskripsi proyek 3</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/500x300?text=Project+4" alt="Project 4">
-        <h3>Proyek 4</h3>
-        <p>Deskripsi proyek 4</p>
+    <div class="container">
+      <h2 class="mb-4">Portofolio</h2>
+      <div class="portfolio-grid">
+        <div class="card">
+          <img src="https://imgs.search.brave.com/EcwcO3AVKJdWmnBpuF-Mb8JXKqzBz1sh23BMptUSLvE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vRUFHWVpf/ZGlwOHcvMi8wLzE2/MDB3L2NhbnZhLWdy/YXktZ3JlZW4tYm9s/ZC1jcmVhdGl2ZS1w/b3J0Zm9saW8tcHJl/c2VudGF0aW9uLVJ4/NFhCTEt2azY4Lmpw/Zw" alt="Project 1">
+          <h3>Proyek 1</h3>
+          <p>Deskripsi Proyek 1</p>
+        </div>
+        <div class="card">
+          <img src="https://imgs.search.brave.com/2qeX2LlsuYqsOIgXFgFsE52zY9-iWvMjYc8xS9LMlrc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtY3NlLmNhbnZh/LmNvbS9ibG9iLzIw/MDM0MTEvMTYwMHct/NFczcUZhZnI5c0ku/anBn" alt="Project 2">
+          <h3>Proyek 2</h3>
+          <p>Deskripsi proyek 2</p>
+        </div>
+        <div class="card">
+          <img src="https://imgs.search.brave.com/SwvGj7RP7YKHAzBvUd39MYDy0D1yq0TxEiqkOjEKe10/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vRUFHZU92/V1ZwQkEvMS8wLzE2/MDB3L2NhbnZhLWJs/YWNrLWJvbGQtcGhv/dG9ncmFwaHktcG9y/dGZvbGlvLXByZXNl/bnRhdGlvbi1ITUd6/UmR2MkhZZy5qcGc" alt="Project 3">
+          <h3>Proyek 3</h3>
+          <p>Deskripsi proyek 3</p>
+        </div>
+        <div class="card">
+          <img src="https://imgs.search.brave.com/YGQ-FJ_iXkSSev7rZuq_efzAOakqGfbcdevI0uepU8A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEwLzIzLzU1LzEy/LzM2MF9GXzEwMjM1/NTEyODFfRThJZ1VR/ZVhPenQya3RNNWV2/MVJvSEk4M0lhamVJ/REYuanBn" alt="Project 4">
+          <h3>Proyek 4</h3>
+          <p>Deskripsi proyek 4</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Bootstrap JS (optional if you want dropdown or modal support) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
