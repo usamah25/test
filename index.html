@@ -2,228 +2,150 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Profil Usamah</title>
+  <title>Profil</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap CSS CDN -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f4f6f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #1f2937;
-      line-height: 1.6;
     }
-
-    header {
-      background-color: #1f2937;
-      padding: 20px 40px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: 500;
-    }
-
-    header nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 60px 40px;
-      background-color: white;
-      flex-wrap: wrap;
-    }
-
-    .hero .text {
-      max-width: 50%;
-    }
-
-    .hero h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      color: #4b5563;
-    }
-
-    .hero img {
+    .hero-img {
       width: 250px;
       height: 250px;
-      border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      border-radius: 50%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     }
-
-    .biodata {
-      padding: 40px;
-    }
-
     .bio-box {
-      background-color: white;
-      padding: 20px;
-      margin-bottom: 20px;
+      background: #fff;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      height: 100%;
     }
-
-    .portfolio {
-      padding: 40px;
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      background-color: white;
+    .portfolio-card {
+      border: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       overflow: hidden;
       transition: transform 0.3s ease;
     }
-
-    .card:hover {
+    .portfolio-card:hover {
       transform: translateY(-5px);
     }
-
-    .card img {
-      width: 100%;
+    .portfolio-card img {
       height: 200px;
       object-fit: cover;
-    }
-
-    .card h3 {
-      padding: 16px 16px 8px;
-      font-size: 1.2em;
-      color: #1f2937;
-    }
-
-    .card p {
-      padding: 0 16px 16px;
-      color: #4b5563;
-      font-size: 0.95em;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero .text {
-        max-width: 100%;
-      }
-
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
 <body>
 
   <!-- Section 1: Menu -->
-  <header>
-    <div class="logo">Profile</div>
-    <nav>
-      <a href="#biodata">Biodata</a>
-      <a href="#portfolio">Portofolio</a>
-      <a href="#">Kontak</a>
-    </nav>
-  </header>
-
-  <!-- Section 2: Judul + Gambar -->
-  <section class="hero">
-    <div class="text">
-      <h1>Selamat datang</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum illo officiis explicabo debitis, qui impedit.</p>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand" href="#">🧑‍💻 Profile</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#biodata">Biodata</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+      </ul>
     </div>
-    <img src="https://imgs.search.brave.com/StlxyBoQ0njPZKEq3Y0eOAO_fMzK-NeceVXKMiXvBR8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzY2LzM5LzU0/LzM2MF9GXzE2NjM5/NTQwMl9VY2JhUzVa/NVRqMXJFYk12emhI/UjFVN0RwQ2dDV2Qz/ci5qcGc" alt="Foto Profil">
+  </nav>
+
+  <!-- Section 2: Hero -->
+  <section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="fw-bold mb-3">Selamat datang</h1>
+        <p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, veniam! Non rem veritatis corrupti! Quis, deserunt velit odio quos earum animi a voluptas doloribus consequatur! Molestiae voluptas harum nam reiciendis?</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="https://imgs.search.brave.com/k_0L-TWQJQnLSpwz6eY-cMJ5Mtv1vJvH7gY2fHC56vk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2U2L2U0/L2RmL2U2ZTRkZjI2/YmE3NTIxNjFiOWZj/NmExNzMyMWZhMjg2/LmpwZw" alt="Foto Profil" class="hero-img">
+      </div>
+    </div>
   </section>
 
-  <!-- Section 3: Biodata (dengan grid Bootstrap) -->
-  <section class="biodata" id="biodata">
-    <div class="container">
-      <h2 class="mb-4">🧾 Biodata</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="bio-box">
-            <strong>Nama:</strong><br>John Doe
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="bio-box">
-            <strong>Tempat/Tanggal Lahir:</strong><br>Bogor, 1 Januari 2000
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="bio-box">
-            <strong>Jenis Kelamin:</strong><br>Laki-laki
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="bio-box">
-            <strong>Alamat:</strong><br>Jl. Contoh No. 123, Bogor
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="bio-box">
-            <strong>Nomor HP:</strong><br>0812-3456-7890
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="bio-box">
-            <strong>Email:</strong><br>example@email.com
-          </div>
-        </div>
-      </div>
+  <!-- Section 3: Biodata -->
+  <section class="container my-5" id="biodata">
+    <h2 class="mb-4">🧾 Biodata</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="bio-box"><strong>Nama:</strong><br>John Doe</div></div>
+      <div class="col-md-4"><div class="bio-box"><strong>Tempat/Tanggal Lahir:</strong><br>Bogor, 1 Januari 2000</div></div>
+      <div class="col-md-4"><div class="bio-box"><strong>Jenis Kelamin:</strong><br>Laki-laki</div></div>
+      <div class="col-md-4"><div class="bio-box"><strong>Alamat:</strong><br>Jl. Contoh No. 123, Bogor</div></div>
+      <div class="col-md-4"><div class="bio-box"><strong>Nomor HP:</strong><br>0812-3456-7890</div></div>
+      <div class="col-md-4"><div class="bio-box"><strong>Email:</strong><br>example@email.com</div></div>
     </div>
   </section>
 
   <!-- Section 4: Portofolio -->
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <h2 class="mb-4">Portofolio</h2>
-      <div class="portfolio-grid">
-        <div class="card">
-          <img src="https://imgs.search.brave.com/EcwcO3AVKJdWmnBpuF-Mb8JXKqzBz1sh23BMptUSLvE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vRUFHWVpf/ZGlwOHcvMi8wLzE2/MDB3L2NhbnZhLWdy/YXktZ3JlZW4tYm9s/ZC1jcmVhdGl2ZS1w/b3J0Zm9saW8tcHJl/c2VudGF0aW9uLVJ4/NFhCTEt2azY4Lmpw/Zw" alt="Project 1">
-          <h3>Proyek 1</h3>
-          <p>Deskripsi Proyek 1</p>
+  <section class="container my-5" id="portfolio">
+    <h2 class="mb-4">🧰 Portofolio</h2>
+    <div class="row g-4">
+      <!-- Project 1 -->
+      <div class="col-md-6">
+        <div class="card portfolio-card">
+          <img src="https://imgs.search.brave.com/LuFxbJ5jgLfjrCcSrnLrTodQhcaWJIkXJcINEWjCQxw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L21n/N2lZTkF1SlVxQ1FU/OXlQZVB5Z2cuanBn" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Portfolio</h5>
+            <p class="card-text">Situs pribadi untuk menampilkan profil, skill, dan kontak saya.</p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalProject1">Lihat Detail</button>
+          </div>
         </div>
-        <div class="card">
-          <img src="https://imgs.search.brave.com/2qeX2LlsuYqsOIgXFgFsE52zY9-iWvMjYc8xS9LMlrc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtY3NlLmNhbnZh/LmNvbS9ibG9iLzIw/MDM0MTEvMTYwMHct/NFczcUZhZnI5c0ku/anBn" alt="Project 2">
-          <h3>Proyek 2</h3>
-          <p>Deskripsi proyek 2</p>
+      </div>
+      <!-- Project 2 -->
+      <div class="col-md-6">
+        <div class="card portfolio-card">
+          <img src="https://imgs.search.brave.com/PtKVEMGSylJ4wqN1BdC-yxQR3Y3tY1RRNApvJ_B1KIE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vRUFGeUN6/aVFnRzgvMi8wLzE2/MDB3L2NhbnZhLWJs/dWUtZ3JlZW4td2F0/ZXJjb2xvci1mbG93/ZXItY3JlYXRpdmUt/cG9ydGZvbGlvLXBy/ZXNlbnRhdGlvbi0y/SUZHbnlkNjU5MC5q/cGc" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Portofolio</h5>
+            <p class="card-text">Situs pribadi untuk menampilkan profil, skill, dan kontak saya.</p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalProject2">Lihat Detail</button>
+          </div>
         </div>
-        <div class="card">
-          <img src="https://imgs.search.brave.com/SwvGj7RP7YKHAzBvUd39MYDy0D1yq0TxEiqkOjEKe10/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vRUFHZU92/V1ZwQkEvMS8wLzE2/MDB3L2NhbnZhLWJs/YWNrLWJvbGQtcGhv/dG9ncmFwaHktcG9y/dGZvbGlvLXByZXNl/bnRhdGlvbi1ITUd6/UmR2MkhZZy5qcGc" alt="Project 3">
-          <h3>Proyek 3</h3>
-          <p>Deskripsi proyek 3</p>
+      </div>
+  </section>
+
+  <!-- Modal Detail Proyek -->
+  <div class="modal fade" id="modalProject1" tabindex="-1" aria-labelledby="modalProject1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProject1Label">Dashboard Inventaris UMKM</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <div class="card">
-          <img src="https://imgs.search.brave.com/YGQ-FJ_iXkSSev7rZuq_efzAOakqGfbcdevI0uepU8A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEwLzIzLzU1LzEy/LzM2MF9GXzEwMjM1/NTEyODFfRThJZ1VR/ZVhPenQya3RNNWV2/MVJvSEk4M0lhamVJ/REYuanBn" alt="Project 4">
-          <h3>Proyek 4</h3>
-          <p>Deskripsi proyek 4</p>
+        <div class="modal-body">
+          <img src="https://via.placeholder.com/800x400?text=Project+1" class="img-fluid mb-3" alt="">
+          <p>Situs pribadi untuk menampilkan profil, skill, dan kontak saya.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Bootstrap JS (optional if you want dropdown or modal support) -->
+  <!-- Modal lainnya (contoh Project 2) -->
+  <div class="modal fade" id="modalProject2" tabindex="-1" aria-labelledby="modalProject2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProject2Label">Website Portofolio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://via.placeholder.com/800x400?text=Project+2" class="img-fluid mb-3" alt="">
+          <p>Situs pribadi untuk menampilkan profil, skill, dan kontak saya.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
