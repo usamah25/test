@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f6f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1f2937;
+    }
+    .hero-img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+    .bio-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      height: 100%;
+    }
+    .portfolio-card {
+      border: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+    }
+    .portfolio-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1: Menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand" href="#">🧑‍💻 Profile</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#biodata">Biodata</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Section 2: Hero -->
+  <section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="fw-bold mb-3">Selamat datang</h1>
+        <p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, veniam! Non rem veritatis corrupti! Quis, deserunt velit odio quos earum animi a voluptas doloribus consequatur! Molestiae voluptas harum nam reiciendis?</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="https://imgs.search.brave.com/k_0L-TWQJQnLSpwz6eY-cMJ5Mtv1vJvH7gY2fHC56vk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2U2L2U0/L2RmL2U2ZTRkZjI2/YmE3NTIxNjFiOWZj/NmExNzMyMWZhMjg2/LmpwZw" alt="Foto Profil" class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Biodata -->
+  <section class="container my-5" id="biodata">
+    <h2 class="mb-4">🧾 Biodata</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="bio-box"><strong>Nama:</strong><br>John Doe</div></div>
+      <div class="col-md-4"><div class="bio-box"><strong>Tempat/Tanggal Lahir:</strong><br>Bogor, 1 Januari 2000</div></div>
+      <div class="col-md-4"><div class="bio-box"><strong>Jenis Kelamin:</strong><br>Laki-laki</div></div>
+      <div class="col-md-4"><div class="bio-box"><strong>Alamat:</strong><br>Jl. Contoh No. 123, Bogor</div></div>
+      <div class="col-md-4"><div class="bio-box"><strong>Nomor HP:</strong><br>0812-3456-7890</div></div>
+      <div class="col-md-4"><div class="bio-box"><strong>Email:</strong><br>example@email.com</div></div>
+    </div>
+  </section>
+
+  <!-- Section 4: Portofolio -->
+  <section class="container my-5" id="portfolio">
+    <h2 class="mb-4">🧰 Portofolio</h2>
+    <div class="row g-4">
+      <!-- Project 1 -->
+      <div class="col-md-6">
+        <div class="card portfolio-card">
+          <img src="https://imgs.search.brave.com/LuFxbJ5jgLfjrCcSrnLrTodQhcaWJIkXJcINEWjCQxw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L21n/N2lZTkF1SlVxQ1FU/OXlQZVB5Z2cuanBn" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Portfolio</h5>
+            <p class="card-text">Situs pribadi untuk menampilkan profil, skill, dan kontak saya.</p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalProject1">Lihat Detail</button>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="col-md-6">
+        <div class="card portfolio-card">
+          <img src="https://imgs.search.brave.com/PtKVEMGSylJ4wqN1BdC-yxQR3Y3tY1RRNApvJ_B1KIE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vRUFGeUN6/aVFnRzgvMi8wLzE2/MDB3L2NhbnZhLWJs/dWUtZ3JlZW4td2F0/ZXJjb2xvci1mbG93/ZXItY3JlYXRpdmUt/cG9ydGZvbGlvLXBy/ZXNlbnRhdGlvbi0y/SUZHbnlkNjU5MC5q/cGc" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Portofolio</h5>
+            <p class="card-text">Situs pribadi untuk menampilkan profil, skill, dan kontak saya.</p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalProject2">Lihat Detail</button>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Modal Detail Proyek -->
+  <div class="modal fade" id="modalProject1" tabindex="-1" aria-labelledby="modalProject1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProject1Label">Dashboard Inventaris UMKM</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://via.placeholder.com/800x400?text=Project+1" class="img-fluid mb-3" alt="">
+          <p>Situs pribadi untuk menampilkan profil, skill, dan kontak saya.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal lainnya (contoh Project 2) -->
+  <div class="modal fade" id="modalProject2" tabindex="-1" aria-labelledby="modalProject2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProject2Label">Website Portofolio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://via.placeholder.com/800x400?text=Project+2" class="img-fluid mb-3" alt="">
+          <p>Situs pribadi untuk menampilkan profil, skill, dan kontak saya.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
